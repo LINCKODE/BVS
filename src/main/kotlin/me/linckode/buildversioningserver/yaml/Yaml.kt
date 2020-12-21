@@ -6,7 +6,7 @@ import com.fasterxml.jackson.dataformat.yaml.YAMLFactory
 import com.fasterxml.jackson.dataformat.yaml.YAMLGenerator
 import java.io.File
 
-abstract class Yaml() {
+abstract class Yaml {
 
     fun getFromFile(file: File): Yaml {
         val mapper = ObjectMapper(YAMLFactory())

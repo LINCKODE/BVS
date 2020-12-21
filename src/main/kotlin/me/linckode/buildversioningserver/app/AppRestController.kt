@@ -27,7 +27,7 @@ class AppRestController {
 
     @PostMapping("/{appName}")
     fun createApp(@PathVariable("appName") appName: String, @RequestParam("masterToken") masterToken: String, ): App{
-        if (masterToken != Main.config.masterToken)
+        if (masterToken != Main.config?.masterToken)
             throw ResponseStatusException(HttpStatus.UNAUTHORIZED)
 
         val app = App(appName, 0, null, "", "")

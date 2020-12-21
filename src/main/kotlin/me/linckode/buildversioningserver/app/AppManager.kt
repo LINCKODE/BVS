@@ -1,7 +1,7 @@
+@file:Suppress("RECEIVER_NULLABILITY_MISMATCH_BASED_ON_JAVA_ANNOTATIONS")
+
 package me.linckode.buildversioningserver.app
 
-import me.linckode.buildversioningserver.user.User
-import me.linckode.buildversioningserver.user.UserManager
 import me.linckode.buildversioningserver.yaml.Yaml
 import java.io.File
 
@@ -30,11 +30,9 @@ object AppManager {
             return null
         }
         val apps = arrayOfNulls<App>(appsFolder.listFiles().size)
-        var index = 0
-        for (file in appsFolder.listFiles()){
+        for ((index, file) in appsFolder.listFiles().withIndex()) {
             val app = loadAppFromFile(file)
             apps[index] = app
-            index++
         }
         return apps
     }

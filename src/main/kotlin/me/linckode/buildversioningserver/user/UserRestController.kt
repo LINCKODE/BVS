@@ -11,7 +11,7 @@ class UserRestController {
 
     @GetMapping
     fun getUsers(@RequestParam("masterToken") masterToken: String): Array<User?>?{
-        if (masterToken != Main.config.masterToken)
+        if (masterToken != Main.config?.masterToken)
             throw ResponseStatusException(HttpStatus.UNAUTHORIZED)
         return UserManager.loadAllUsers()
     }
@@ -19,7 +19,7 @@ class UserRestController {
     @GetMapping("/{user}")
     fun getUser(@PathVariable("user") user: String, @RequestParam("masterToken") masterToken: String): User?{
 
-        if (masterToken != Main.config.masterToken)
+        if (masterToken != Main.config?.masterToken)
             throw ResponseStatusException(HttpStatus.UNAUTHORIZED)
         return UserManager.loadUser(user)
     }
@@ -28,12 +28,12 @@ class UserRestController {
      fun createUser(@PathVariable("user") user: String, @RequestParam("masterToken") masterToken: String,
                     @RequestParam("accessToken") accessToken: String): User {
 
-         if (masterToken != Main.config.masterToken)
-             throw ResponseStatusException (HttpStatus.UNAUTHORIZED)
+        if (masterToken != Main.config?.masterToken)
+            throw ResponseStatusException(HttpStatus.UNAUTHORIZED)
 
         val userObject = User(user, accessToken, null)
 
         return UserManager.createUser(userObject)
-     }
+    }
 
 }

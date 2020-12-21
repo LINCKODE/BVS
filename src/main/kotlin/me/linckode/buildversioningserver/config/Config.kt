@@ -5,7 +5,7 @@ import me.linckode.buildversioningserver.yaml.Yaml
 class Config : Yaml {
     var masterToken = ""
 
-    constructor() {}
+    constructor()
     constructor(masterToken: String) {
         this.masterToken = masterToken
     }

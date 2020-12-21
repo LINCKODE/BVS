@@ -9,7 +9,7 @@ class User : Yaml {
     var apps: Array<String?>? = arrayOfNulls(0)
 
 
-    constructor() {}
+    constructor()
     constructor(name: String, accessToken: String, apps: Array<String?>?) : super() {
         this.name = name
         this.accessToken = accessToken

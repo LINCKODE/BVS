@@ -3,7 +3,6 @@ package me.linckode.buildversioningserver.config
 import me.linckode.buildversioningserver.yaml.Yaml
 import org.apache.logging.log4j.LogManager
 import java.io.File
-import kotlin.math.log
 import kotlin.system.exitProcess
 
 object ConfigManager {
