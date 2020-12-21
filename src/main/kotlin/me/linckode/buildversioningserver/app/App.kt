@@ -10,7 +10,7 @@ class App : Yaml {
     lateinit var lastUpdated: String
     lateinit var lastUpdater: String
 
-    constructor() {}
+    constructor()
     constructor(name: String, currentBuild: Int, contributors: Array<String?>?, lastUpdated: String, lastUpdater: String) : super() {
         this.name = name
         this.currentBuild = currentBuild

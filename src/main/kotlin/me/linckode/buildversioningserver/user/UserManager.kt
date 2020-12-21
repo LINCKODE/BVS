@@ -1,3 +1,5 @@
+@file:Suppress("RECEIVER_NULLABILITY_MISMATCH_BASED_ON_JAVA_ANNOTATIONS")
+
 package me.linckode.buildversioningserver.user
 
 import me.linckode.buildversioningserver.yaml.Yaml
@@ -29,11 +31,9 @@ object UserManager {
             return null
         }
         val users = arrayOfNulls<User>(userFolder.listFiles().size)
-        var index = 0
-        for (file in userFolder.listFiles()){
+        for ((index, file) in userFolder.listFiles().withIndex()) {
             val user = loadUserFromFile(file)
             users[index] = user
-            index++
         }
         return users
     }
