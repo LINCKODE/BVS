@@ -41,9 +41,9 @@ These files can be found in the "apps" and "users" directories.
 name: "exampleApp"
 currentBuild: 8
 contributors:
-- "LINCKODE"
+- "exampleUser"
 lastUpdated: "12:00:45/21-12-2020"
-lastUpdater: "LINCKODE"
+lastUpdater: "exampleUser"
 ```
 
 ### User YAML example:
