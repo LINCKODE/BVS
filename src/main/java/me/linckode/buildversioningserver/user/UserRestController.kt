@@ -31,12 +31,9 @@ class UserRestController {
          if (masterToken != Main.config.masterToken)
              throw ResponseStatusException (HttpStatus.UNAUTHORIZED)
 
-        val user = User(user, accessToken, null)
+        val userObject = User(user, accessToken, null)
 
-        return UserManager.createUser(user)
+        return UserManager.createUser(userObject)
      }
-
-
-    //TODO: ADD APP TO USER APP LIST
 
 }
