@@ -11,12 +11,11 @@ BVS is a build versioning server written in Kotlin and Java that uses the Spring
 ## Installation
 >BVS requires at least java 11 to run if you use the precompiled binary but should work with java 8 if you compile from source.
 
-Download the precompiled binary (or compile yourself from source) and place it in the directory you would like to run it in.
+Download the source code and place it in the directory you would like to run it in.
 You can run it from a terminal using :
 ```sh
-java -jar <binary-name>.jar
+./mvnw spring-boot:run
 ```
->Replace ```<binary-name>``` with the name of the binary.
 
 On first run it will generate a configuration file and two directories for data storage.
 You will have to edit the configuration file to setup a master token that will be used for user and app management.
