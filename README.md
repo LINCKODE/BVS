@@ -1,7 +1,7 @@
 # BVS
 
 
-BVS is a build versioning server written in Kotlin and Java that uses the Spring Framework.
+BVS is a build versioning server written in Kotlin that uses the Spring Framework.
 
 ## Features
   - Apps and users are easy to manage using the REST API
