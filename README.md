@@ -3,6 +3,8 @@
 
 BVS is a build versioning server written in Kotlin that uses the Spring Framework.
 
+>A client will be built at some point that would make the requests by itself, change the build version locally and compile the project. BVS was create more as a proof of concept.
+
 ## Features
   - Apps and users are easy to manage using the REST API
   - App and user data are stored in easily editable YAML files
