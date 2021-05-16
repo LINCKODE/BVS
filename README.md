@@ -57,7 +57,7 @@ apps:
 
 ## Usage
 
-The REST API runs on port 8080. The port cannot be changed at the moment, but this feature to do so will be added in a future update.
+The REST API runs on port 8080. The port cannot be changed at the moment.
 
 #### Requests:
 
